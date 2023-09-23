@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Revenue from "../components/Card";
 import { revenueData } from "../data";
 import Activities from "../components/BarGraph";

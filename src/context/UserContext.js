@@ -59,6 +59,7 @@ export function UserProvider({ children }) {
             .then((data) => {
                 setCardData(data?.data);
             });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const handleClick = () => {

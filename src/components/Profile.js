@@ -29,13 +29,13 @@ const Profile = () => {
                         </div>
                         <div className=" grid grid-flow-row grid-cols-1 gap-6 pt-8 lg:grid-cols-2">
                             <div className="flex items-center gap-5">
-                                <img src={wa} className="h-11 "></img>
+                                <img src={wa} className="h-11 " alt="wa"></img>
                                 <div className="text-xs">{userProfile.phone}</div>
                             </div>
                             <div className="flex items-center gap-5">
                                 {userProfile.igLink && (
                                     <>
-                                        <img src={ig} className="h-11 "></img>
+                                        <img src={ig} className="h-11 " alt="wa"></img>
                                         <div className=" break-all text-xs">
                                             {userProfile.igLink}
                                         </div>
@@ -43,7 +43,7 @@ const Profile = () => {
                                 )}
                             </div>
                             <div className="flex items-center gap-5  ">
-                                <img src={em} className="h-11"></img>
+                                <img src={em} className="h-11" alt="wa"></img>
                                 <div
                                     className={` text-xs ${userProfile.ytLink && "break-all"}`}
                                 >
@@ -54,7 +54,7 @@ const Profile = () => {
                                 {userProfile.ytLink && (
                                     <>
                                         {" "}
-                                        <img src={yt} className="h-11 "></img>
+                                        <img src={yt} className="h-11 " alt="wa"></img>
                                         <div className={`break-all text-xs `}>
                                             {userProfile.ytLink}
                                         </div>
