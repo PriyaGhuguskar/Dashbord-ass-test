@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import './App.css'
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
 
-function App() {
+import Users from "./pages/Users";
+import Transactions from "./pages/Transactions";
+import Schedules from "./pages/Schedules";
+import Settings from "./pages/Settings";
+
+import Signin from "./pages/Signin";
+import { UserProvider } from "./context/UserContext";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserProvider>
+      <div className="font-['Montserrat'] bg-[#F5F5F5]">
+        <Routes>
+          <Route path="/login" element={<Signin />} />
+          <Route path="/" element={<Home />}>
+            <Route index element={<Dashboard />} />
+            <Route path="users" element={<Users />} />
+            <Route path="transactions" element={<Transactions />} />
+            <Route path="schedules" element={<Schedules />} />
+            <Route path="settings" element={<Settings />} />
+          </Route>
+        </Routes>
+      </div>
+    </UserProvider>
   );
-}
+};
 
 export default App;
